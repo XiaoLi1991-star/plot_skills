@@ -6,6 +6,16 @@ This repository is organized as a skills collection in the style of `anthropics/
 
 - [rplot](skills/rplot/): R-based publication-style plotting from tabular data.
 
+## RPlot Gallery
+
+![RPlot thumbnail gallery](docs/assets/rplot-thumbnail-gallery.png)
+
+Regenerate this gallery after thumbnail updates:
+
+```bash
+python scripts/build_thumbnail_gallery.py
+```
+
 ## Install RPlot For Codex
 
 For a user-level Codex install, copy or install the skill folder to:
