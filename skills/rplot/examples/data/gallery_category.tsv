@@ -1,0 +1,13 @@
+category	group	subcategory	value	value2	lower	upper
+Alpha	Control	A1	18	24	15	21
+Alpha	Treated	A2	30	36	26	34
+Beta	Control	B1	22	18	18	26
+Beta	Treated	B2	34	29	30	38
+Gamma	Control	G1	15	20	12	18
+Gamma	Treated	G2	27	33	23	31
+Delta	Control	D1	20	17	16	24
+Delta	Treated	D2	25	31	21	29
+Epsilon	Control	E1	12	16	9	15
+Epsilon	Treated	E2	21	28	18	24
+Zeta	Control	Z1	17	14	14	20
+Zeta	Treated	Z2	23	26	19	27

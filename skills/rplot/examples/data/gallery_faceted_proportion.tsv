@@ -1,0 +1,94 @@
+type	RCB	variable	value	count
+Clinical stage	pCR	Tumor stage	1	34
+Clinical stage	pCR	Tumor stage	2	52
+Clinical stage	pCR	Tumor stage	3/4	14
+Clinical stage	RCB-I	Tumor stage	1	24
+Clinical stage	RCB-I	Tumor stage	2	56
+Clinical stage	RCB-I	Tumor stage	3/4	20
+Clinical stage	RCB-II	Tumor stage	1	16
+Clinical stage	RCB-II	Tumor stage	2	54
+Clinical stage	RCB-II	Tumor stage	3/4	30
+Clinical stage	RCB-III	Tumor stage	1	10
+Clinical stage	RCB-III	Tumor stage	2	45
+Clinical stage	RCB-III	Tumor stage	3/4	45
+Clinical stage	pCR	Nodal stage	0	58
+Clinical stage	pCR	Nodal stage	1+	34
+Clinical stage	pCR	Nodal stage	2/3	8
+Clinical stage	RCB-I	Nodal stage	0	48
+Clinical stage	RCB-I	Nodal stage	1+	39
+Clinical stage	RCB-I	Nodal stage	2/3	13
+Clinical stage	RCB-II	Nodal stage	0	36
+Clinical stage	RCB-II	Nodal stage	1+	44
+Clinical stage	RCB-II	Nodal stage	2/3	20
+Clinical stage	RCB-III	Nodal stage	0	22
+Clinical stage	RCB-III	Nodal stage	1+	46
+Clinical stage	RCB-III	Nodal stage	2/3	32
+Biomarker status	pCR	ER status	+	44
+Biomarker status	pCR	ER status	-	56
+Biomarker status	RCB-I	ER status	+	58
+Biomarker status	RCB-I	ER status	-	42
+Biomarker status	RCB-II	ER status	+	71
+Biomarker status	RCB-II	ER status	-	29
+Biomarker status	RCB-III	ER status	+	82
+Biomarker status	RCB-III	ER status	-	18
+Biomarker status	pCR	HER2 status	+	38
+Biomarker status	pCR	HER2 status	-	62
+Biomarker status	RCB-I	HER2 status	+	30
+Biomarker status	RCB-I	HER2 status	-	70
+Biomarker status	RCB-II	HER2 status	+	24
+Biomarker status	RCB-II	HER2 status	-	76
+Biomarker status	RCB-III	HER2 status	+	18
+Biomarker status	RCB-III	HER2 status	-	82
+Biomarker status	pCR	Grade	1/2	48
+Biomarker status	pCR	Grade	3	52
+Biomarker status	RCB-I	Grade	1/2	42
+Biomarker status	RCB-I	Grade	3	58
+Biomarker status	RCB-II	Grade	1/2	36
+Biomarker status	RCB-II	Grade	3	64
+Biomarker status	RCB-III	Grade	1/2	29
+Biomarker status	RCB-III	Grade	3	71
+Treatment	pCR	Neoadjuvant therapy	CT	45
+Treatment	pCR	Neoadjuvant therapy	T+A	39
+Treatment	pCR	Neoadjuvant therapy	ET	16
+Treatment	RCB-I	Neoadjuvant therapy	CT	52
+Treatment	RCB-I	Neoadjuvant therapy	T+A	31
+Treatment	RCB-I	Neoadjuvant therapy	ET	17
+Treatment	RCB-II	Neoadjuvant therapy	CT	61
+Treatment	RCB-II	Neoadjuvant therapy	T+A	23
+Treatment	RCB-II	Neoadjuvant therapy	ET	16
+Treatment	RCB-III	Neoadjuvant therapy	CT	68
+Treatment	RCB-III	Neoadjuvant therapy	T+A	16
+Treatment	RCB-III	Neoadjuvant therapy	ET	16
+Treatment	pCR	Surgery	BCS	63
+Treatment	pCR	Surgery	Mx	37
+Treatment	RCB-I	Surgery	BCS	55
+Treatment	RCB-I	Surgery	Mx	45
+Treatment	RCB-II	Surgery	BCS	42
+Treatment	RCB-II	Surgery	Mx	58
+Treatment	RCB-III	Surgery	BCS	31
+Treatment	RCB-III	Surgery	Mx	69
+Pathology	pCR	ypT stage	0	74
+Pathology	pCR	ypT stage	1	20
+Pathology	pCR	ypT stage	2/3	6
+Pathology	RCB-I	ypT stage	0	28
+Pathology	RCB-I	ypT stage	1	58
+Pathology	RCB-I	ypT stage	2/3	14
+Pathology	RCB-II	ypT stage	0	7
+Pathology	RCB-II	ypT stage	1	50
+Pathology	RCB-II	ypT stage	2/3	43
+Pathology	RCB-III	ypT stage	0	1
+Pathology	RCB-III	ypT stage	1	28
+Pathology	RCB-III	ypT stage	2/3	71
+Pathology	pCR	ypN stage	0	90
+Pathology	pCR	ypN stage	1	8
+Pathology	pCR	ypN stage	2/3	2
+Pathology	RCB-I	ypN stage	0	77
+Pathology	RCB-I	ypN stage	1	18
+Pathology	RCB-I	ypN stage	2/3	5
+Pathology	RCB-II	ypN stage	0	52
+Pathology	RCB-II	ypN stage	1	35
+Pathology	RCB-II	ypN stage	2/3	13
+Pathology	RCB-III	ypN stage	0	34
+Pathology	RCB-III	ypN stage	1	42
+Pathology	RCB-III	ypN stage	2/3	24
+

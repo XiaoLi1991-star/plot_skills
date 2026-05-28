@@ -1,0 +1,16 @@
+from	to	weight	type
+Metabolism	Energy	12	Pathway
+Metabolism	Lipid	8	Pathway
+Metabolism	Amino acid	6	Pathway
+Energy	Mitochondria	9	Module
+Energy	Glycolysis	7	Module
+Lipid	Membrane	5	Module
+Lipid	Signaling	4	Module
+Amino acid	Urea cycle	4	Module
+Amino acid	Neuroactive	3	Module
+Mitochondria	ATP5F1A	6	Gene
+Glycolysis	PFKP	5	Gene
+Membrane	PCYT1A	4	Gene
+Signaling	PIK3CA	4	Gene
+Urea cycle	ASS1	3	Gene
+Neuroactive	GLUL	3	Gene

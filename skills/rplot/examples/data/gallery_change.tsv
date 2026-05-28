@@ -1,0 +1,9 @@
+category	value	value2	lower	upper
+Revenue	28	34	24	32
+Cost	-12	18	-16	-8
+Quality	16	22	12	20
+Latency	-9	14	-12	-6
+Retention	21	25	17	25
+Churn	-7	11	-10	-4
+Coverage	14	20	10	18
+Support	-5	9	-8	-2

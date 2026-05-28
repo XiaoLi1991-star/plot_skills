@@ -1,0 +1,17 @@
+term	category	gene_ratio	count	padj
+Oxidative phosphorylation	KEGG	0.42	28	0.0005
+Ribosome	KEGG	0.35	24	0.0011
+Carbon metabolism	KEGG	0.31	20	0.0024
+Fatty acid degradation	KEGG	0.26	16	0.0060
+Amino acid biosynthesis	KEGG	0.23	14	0.0120
+Cell cycle	KEGG	0.20	12	0.0280
+Mitochondrial matrix	GO CC	0.37	26	0.0009
+Respiratory chain complex	GO CC	0.29	18	0.0035
+Endoplasmic reticulum	GO CC	0.22	15	0.0180
+Protein folding	GO BP	0.33	23	0.0018
+Response to oxidative stress	GO BP	0.27	19	0.0042
+Lipid transport	GO BP	0.24	17	0.0100
+Immune response	GO BP	0.18	11	0.0360
+Kinase activity	GO MF	0.21	13	0.0200
+NADH dehydrogenase activity	GO MF	0.30	18	0.0022
+Transferase activity	GO MF	0.19	12	0.0440

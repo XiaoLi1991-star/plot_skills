@@ -1,0 +1,13 @@
+category	subcategory	value
+Omics	PCA	18
+Omics	Heatmap	16
+Omics	Volcano	22
+Workflow	QC	12
+Workflow	Report	20
+Workflow	Export	9
+Knowledge	RAG	15
+Knowledge	Web import	11
+Knowledge	Citation	8
+Agent	Planning	14
+Agent	Execution	17
+Agent	Review	10

@@ -1,0 +1,11 @@
+name: rplot
+display_name: "RPlot Generic Plotting"
+summary: "Reusable R plotting workflows for Codex."
+highlights:
+  - "Generates PNG and PDF outputs from CSV/TSV/XLS/XLSX tables."
+  - "Supports Docker and local R installation."
+  - "Includes a validation runner for all bundled example workflows."
+  - "Covers common statistical, biomedical, network, enrichment, and article-style charts."
+entrypoint: "SKILL.md"
+registry: "registry.yaml"
+docker_image: "codex-rplot:latest"

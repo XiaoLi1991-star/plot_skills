@@ -1,0 +1,15 @@
+Package: codex.rplot
+Type: Package
+Title: Shared Utilities for Codex RPlot Skill
+Version: 0.1.0
+Authors@R: person("RPlot", "Contributors", role = c("aut", "cre"), email = "noreply@example.com")
+Description: Shared table input, theme, palette, validation, and output helpers used by the Codex RPlot skill scripts.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports:
+    data.table,
+    ggplot2,
+    readxl,
+    scales,
+    stringr

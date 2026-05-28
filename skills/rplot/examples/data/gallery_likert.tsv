@@ -1,0 +1,26 @@
+question	response	value
+Workflow is clear	Strongly disagree	3
+Workflow is clear	Disagree	7
+Workflow is clear	Neutral	14
+Workflow is clear	Agree	31
+Workflow is clear	Strongly agree	25
+Results are reproducible	Strongly disagree	2
+Results are reproducible	Disagree	6
+Results are reproducible	Neutral	12
+Results are reproducible	Agree	35
+Results are reproducible	Strongly agree	25
+Agent follows context	Strongly disagree	4
+Agent follows context	Disagree	8
+Agent follows context	Neutral	16
+Agent follows context	Agree	29
+Agent follows context	Strongly agree	23
+Plots are publication-ready	Strongly disagree	2
+Plots are publication-ready	Disagree	5
+Plots are publication-ready	Neutral	15
+Plots are publication-ready	Agree	33
+Plots are publication-ready	Strongly agree	25
+Runtime paths are stable	Strongly disagree	5
+Runtime paths are stable	Disagree	9
+Runtime paths are stable	Neutral	18
+Runtime paths are stable	Agree	28
+Runtime paths are stable	Strongly agree	20

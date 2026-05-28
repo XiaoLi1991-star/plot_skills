@@ -1,0 +1,152 @@
+skill_name: rplot
+display_name: "RPlot Generic Plotting"
+version: "0.4.0"
+docker_image: "codex-rplot:latest"
+dockerfile: "Dockerfile"
+
+runtime_dependencies:
+  local_install: "Rscript scripts/install_deps.R"
+  docker_build: "docker build -t codex-rplot:latest ."
+  package: "codex.rplot"
+  recommended_for_codex: "local_install"
+
+usage:
+  output_rule: "Use --plot_name as an output prefix; every workflow writes <prefix>.png and <prefix>.pdf."
+  health_check: "Run Rscript scripts/check_install.R for a fast dependency and smoke-test check."
+  validation: "Run Rscript scripts/run_all_examples.R to validate all bundled examples."
+  script_root: "Use paths relative to the skill root for local runs, or /skills/rplot inside the Docker image."
+
+common_params:
+  - "--data_input"
+  - "--input_matrix"
+  - "--sample_info"
+  - "--plot_name"
+  - "--theme"
+  - "--palette"
+  - "--fig_width"
+  - "--fig_height"
+  - "--base_font_size"
+  - "--title"
+  - "--x_title"
+  - "--y_title"
+
+workflows:
+  - id: scatter_bubble_plot
+    module_dir: scatter_bubble
+    script: scatter_bubble_plot.R
+    example: "Rscript scripts/scatter_bubble/scatter_bubble_plot.R --data_input examples/data/generic_measurements.tsv --x_col score_a --y_col abundance --color_col group --size_col score_b --label_col biomarker --label_top_n 5 --plot_name figures/scatter_bubble_plot"
+  - id: box_violin_plot
+    module_dir: box_violin
+    script: box_violin_plot.R
+    example: "Rscript scripts/box_violin/box_violin_plot.R --data_input examples/data/generic_measurements.tsv --x_col group --y_col abundance --mode box_violin --sort_by_median TRUE --plot_name figures/box_violin_plot"
+  - id: bar_lollipop_plot
+    module_dir: bar_lollipop
+    script: bar_lollipop_plot.R
+    example: "Rscript scripts/bar_lollipop/bar_lollipop_plot.R --data_input examples/data/category_scores.tsv --category_col term --value_col score --color_col category --mode lollipop --top_n 12 --plot_name figures/bar_lollipop_plot"
+  - id: correlation_heatmap
+    module_dir: correlation_heatmap
+    script: correlation_heatmap.R
+    example: "Rscript scripts/correlation_heatmap/correlation_heatmap.R --data_input examples/data/generic_measurements.tsv --columns score_a,score_b,abundance --plot_name figures/correlation_heatmap"
+  - id: matrix_heatmap
+    module_dir: matrix_heatmap
+    script: matrix_heatmap.R
+    example: "Rscript scripts/matrix_heatmap/matrix_heatmap.R --input_matrix examples/data/expression_matrix.tsv --sample_info examples/data/sample_info.tsv --id_col feature --plot_name figures/matrix_heatmap"
+  - id: pca_plot
+    module_dir: pca_plot
+    script: pca_plot.R
+    example: "Rscript scripts/pca_plot/pca_plot.R --input_matrix examples/data/expression_matrix.tsv --sample_info examples/data/sample_info.tsv --id_col feature --plot_name figures/pca_plot"
+  - id: upset_plot
+    module_dir: upset_plot
+    script: upset_plot.R
+    example: "Rscript scripts/upset_plot/upset_plot.R --data_input examples/data/set_membership.tsv --item_col item --set_col set --plot_name figures/upset_plot"
+  - id: alluvial_plot
+    module_dir: alluvial_plot
+    script: alluvial_plot.R
+    example: "Rscript scripts/alluvial_plot/alluvial_plot.R --data_input examples/data/alluvial_paths.tsv --axis_cols source,class,outcome --weight_col count --fill_col source --plot_name figures/alluvial_plot"
+
+chart_gallery:
+  script: scripts/chart_gallery/chart_gallery.R
+  mode_param: "--mode"
+  workflows:
+    - {id: histogram_plot, mode: histogram, data: gallery_points.tsv}
+    - {id: density_plot, mode: density, data: gallery_points.tsv}
+    - {id: frequency_polygon_plot, mode: frequency_polygon, data: gallery_points.tsv}
+    - {id: ecdf_plot, mode: ecdf, data: gallery_points.tsv}
+    - {id: qq_plot, mode: qq_plot, data: gallery_points.tsv}
+    - {id: dot_plot, mode: dot_plot, data: gallery_category.tsv}
+    - {id: jitter_strip_plot, mode: jitter_strip, data: gallery_points.tsv}
+    - {id: hexbin_plot, mode: hexbin, data: gallery_points.tsv}
+    - {id: density2d_contour_plot, mode: density2d_contour, data: gallery_points.tsv}
+    - {id: density2d_filled_plot, mode: density2d_filled, data: gallery_points.tsv}
+    - {id: line_plot, mode: line, data: gallery_time.tsv}
+    - {id: area_plot, mode: area, data: gallery_time.tsv}
+    - {id: stacked_area_plot, mode: stacked_area, data: gallery_time.tsv}
+    - {id: step_plot, mode: step, data: gallery_time.tsv}
+    - {id: ribbon_plot, mode: ribbon, data: gallery_time.tsv}
+    - {id: grouped_bar_plot, mode: grouped_bar, data: gallery_category.tsv}
+    - {id: stacked_bar_plot, mode: stacked_bar, data: gallery_category.tsv}
+    - {id: faceted_proportion_bar_plot, mode: faceted_proportion_bar, data: gallery_faceted_proportion.tsv}
+    - {id: diverging_bar_plot, mode: diverging_bar, data: gallery_change.tsv}
+    - {id: errorbar_plot, mode: errorbar, data: gallery_category.tsv}
+    - {id: pointrange_plot, mode: pointrange, data: gallery_category.tsv}
+    - {id: dumbbell_plot, mode: dumbbell, data: gallery_change.tsv}
+    - {id: slope_chart, mode: slope, data: gallery_slope.tsv}
+    - {id: butterfly_chart, mode: butterfly, data: gallery_change.tsv}
+    - {id: pie_chart, mode: pie, data: gallery_composition.tsv}
+    - {id: donut_chart, mode: donut, data: gallery_composition.tsv}
+    - {id: waffle_chart, mode: waffle, data: gallery_composition.tsv}
+    - {id: treemap_chart, mode: treemap, data: gallery_composition.tsv}
+    - {id: sunburst_chart, mode: sunburst, data: gallery_hierarchy.tsv}
+    - {id: waterfall_chart, mode: waterfall, data: gallery_change.tsv}
+    - {id: pareto_chart, mode: pareto, data: gallery_composition.tsv}
+    - {id: radar_chart, mode: radar, data: gallery_category.tsv}
+    - {id: polar_bar_chart, mode: polar_bar, data: gallery_composition.tsv}
+    - {id: tile_heatmap, mode: tile_heatmap, data: gallery_grid.tsv}
+    - {id: calendar_heatmap, mode: calendar_heatmap, data: gallery_grid.tsv}
+    - {id: gantt_chart, mode: gantt, data: gallery_tasks.tsv}
+    - {id: ridge_plot, mode: ridge, data: gallery_distribution.tsv}
+    - {id: half_violin_plot, mode: half_violin, data: gallery_distribution.tsv}
+    - {id: raincloud_plot, mode: raincloud, data: gallery_distribution.tsv}
+    - {id: beeswarm_plot, mode: beeswarm, data: gallery_distribution.tsv}
+    - {id: bean_plot, mode: beanplot, data: gallery_distribution.tsv}
+    - {id: mirrored_histogram, mode: density_hist_mirror, data: gallery_distribution.tsv}
+    - {id: parallel_coordinate_plot, mode: parallel_coordinate, data: gallery_points.tsv}
+    - {id: bump_chart, mode: bump_chart, data: gallery_slope.tsv}
+    - {id: streamgraph, mode: streamgraph, data: gallery_time.tsv}
+    - {id: connected_scatter_plot, mode: connected_scatter, data: gallery_points.tsv}
+    - {id: dual_axis_line, mode: dual_axis_line, data: gallery_time.tsv}
+    - {id: roc_curve, mode: roc_curve, data: gallery_model.tsv}
+    - {id: calibration_curve, mode: calibration_curve, data: gallery_model.tsv}
+    - {id: survival_curve, mode: survival_curve, data: gallery_survival.tsv}
+    - {id: forest_plot, mode: forest_plot, data: gallery_forest.tsv}
+    - {id: funnel_plot, mode: funnel_plot, data: gallery_model.tsv}
+    - {id: taylor_diagram, mode: taylor_diagram, data: gallery_model.tsv}
+    - {id: likert_plot, mode: likert_plot, data: gallery_likert.tsv}
+    - {id: mosaic_plot, mode: mosaic_plot, data: gallery_hierarchy.tsv}
+    - {id: rose_chart, mode: rose_chart, data: gallery_composition.tsv}
+    - {id: ma_plot, mode: ma_plot, data: gallery_model.tsv}
+    - {id: bland_altman_plot, mode: bland_altman, data: gallery_model.tsv}
+    - {id: volcano_plot, mode: volcano, data: gallery_differential.tsv}
+    - {id: enrichment_dotplot, mode: enrichment_dotplot, data: gallery_enrichment.tsv}
+    - {id: enrichment_barplot, mode: enrichment_barplot, data: gallery_enrichment.tsv}
+    - {id: venn_diagram, mode: venn_diagram, data: set_membership.tsv}
+    - {id: chord_diagram, mode: chord_diagram, data: gallery_edges.tsv}
+    - {id: arc_network, mode: arc_network, data: gallery_edges.tsv}
+    - {id: ternary_plot, mode: ternary_plot, data: gallery_ternary.tsv}
+    - {id: seqlogo_plot, mode: seqlogo_plot, data: gallery_sequences.tsv}
+    - {id: wordcloud_plot, mode: wordcloud_plot, data: gallery_composition.tsv}
+
+article_gallery:
+  script: scripts/article_gallery/article_gallery.R
+  data: article_gallery_demo.tsv
+  workflows:
+    - {id: article_concept_heatmap, mode: concept_heatmap}
+    - {id: article_raincloud_compact, mode: raincloud_compact}
+    - {id: article_estimation_pvalue, mode: estimation_pvalue}
+    - {id: article_phase_portrait, mode: phase_portrait}
+    - {id: article_grouped_dot_matrix, mode: grouped_dot_matrix}
+    - {id: article_cluster_layer_heatmap, mode: cluster_layer_heatmap}
+    - {id: article_pseudo_3d_heatmap, mode: pseudo_3d_heatmap}
+    - {id: article_rank_lollipop_badge, mode: rank_lollipop_badge}
+    - {id: article_multi_panel_distribution, mode: multi_panel_distribution}
+    - {id: article_nested_donut, mode: nested_donut}

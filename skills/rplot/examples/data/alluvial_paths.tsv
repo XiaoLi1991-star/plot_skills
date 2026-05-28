@@ -1,0 +1,11 @@
+source	class	outcome	count
+Upload	Validated	Report	42
+Upload	Validated	Figure	31
+Upload	Needs cleanup	Report	12
+Upload	Needs cleanup	Failed QC	7
+Pipeline	Validated	Report	55
+Pipeline	Validated	Figure	48
+Pipeline	Needs cleanup	Figure	10
+Pipeline	Needs cleanup	Failed QC	5
+Knowledge base	Validated	Report	18
+Knowledge base	Needs cleanup	Report	6

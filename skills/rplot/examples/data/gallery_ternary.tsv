@@ -1,0 +1,16 @@
+sample	group	A	B	C
+Mix01	Control	45	35	20
+Mix02	Control	50	30	20
+Mix03	Control	42	38	20
+Mix04	Control	48	28	24
+Mix05	Control	40	36	24
+Mix06	Treated	28	46	26
+Mix07	Treated	25	50	25
+Mix08	Treated	30	42	28
+Mix09	Treated	22	48	30
+Mix10	Treated	27	44	29
+Mix11	Recovery	34	32	34
+Mix12	Recovery	37	30	33
+Mix13	Recovery	31	35	34
+Mix14	Recovery	36	28	36
+Mix15	Recovery	33	33	34

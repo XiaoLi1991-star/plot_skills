@@ -1,0 +1,7 @@
+task	group	start	end	value
+Collect data	Input	2026-01-01	2026-01-07	7
+Clean table	Input	2026-01-06	2026-01-12	6
+Run workflow	Analysis	2026-01-10	2026-01-18	8
+Inspect QC	Analysis	2026-01-15	2026-01-22	7
+Build figures	Visualization	2026-01-20	2026-01-29	9
+Write report	Output	2026-01-27	2026-02-04	8

@@ -1,0 +1,13 @@
+term	group	estimate	lower	upper
+Age	Clinical	0.18	0.05	0.31
+BMI	Clinical	-0.12	-0.25	0.01
+Baseline score	Clinical	0.34	0.18	0.50
+Treatment	Clinical	-0.28	-0.45	-0.11
+Pathway A	Omics	0.42	0.21	0.63
+Pathway B	Omics	-0.31	-0.52	-0.10
+Pathway C	Omics	0.16	-0.02	0.34
+Module M1	Omics	0.27	0.08	0.46
+Module M2	Omics	-0.22	-0.39	-0.05
+Batch	Technical	0.09	-0.04	0.22
+Instrument	Technical	-0.06	-0.18	0.06
+Run order	Technical	0.13	0.01	0.25

@@ -1,0 +1,8 @@
+.Rhistory
+.RData
+.Rproj.user/
+.test_output/
+skills/*/.test_output/
+figures/
+skills/*/figures/
+*.log
